@@ -10,5 +10,5 @@ dependencies = []
 Repository = "https://github.com/NotProniss/ComfyUI_PixelAnchoredRemaster"
 
 [tool.comfy]
-PublisherId = "your_publisher_id"
+PublisherId = "proniss"
 DisplayName = "ComfyUI Pixel Anchored Remaster"
