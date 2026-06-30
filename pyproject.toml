@@ -7,7 +7,7 @@ requires-python = ">=3.12"
 dependencies = []
 
 [project.urls]
-Repository = "https://github.com/NotProniss/ComfyUI_PixelAnchoredRemaster"
+Repository = "https://github.com/NotProniss/PixelAnchoredRemaster"
 
 [tool.comfy]
 PublisherId = "proniss"
