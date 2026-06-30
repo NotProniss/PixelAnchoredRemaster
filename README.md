@@ -1,4 +1,4 @@
-# ComfyUI Pixel Anchored Remaster
+# Pixel Anchored Remaster
 
 Pixel Anchored Remaster is a remasterer, not a conventional upscaler. It takes an already HiRes Fixed image, reduces upscale artifacts through pixel-space downscaling, restores the image to working resolution in latent space, and then uses KSampler to rebuild detail. The goal is not pixel-perfect preservation — minor drift is fine if it gives a better final image.
 
