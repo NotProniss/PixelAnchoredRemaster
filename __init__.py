@@ -49,7 +49,10 @@ class PixelAnchoredRemaster:
         )[0]
 
     def _decode_tiled(self, vae, samples, tile_size, overlap):
-        return vae.decode_tiled(samples, tile_x=tile_size, tile_y=tile_size, overlap=overlap)
+        images = vae.decode_tiled(samples, tile_x=tile_size, tile_y=tile_size, overlap=overlap)
+        if len(images.shape) == 5:  # Match ComfyUI's built-in VAEDecodeTiled cleanup.
+            images = images.reshape(-1, images.shape[-3], images.shape[-2], images.shape[-1])
+        return images
 
     def _encode_tiled(self, vae, image, tile_size, overlap):
         return vae.encode_tiled(image[:, :, :, :3], tile_x=tile_size, tile_y=tile_size, overlap=overlap)
